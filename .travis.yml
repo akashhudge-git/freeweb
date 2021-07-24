@@ -9,4 +9,4 @@ before_install:
 
 script:
 #- docker run -e CI=true akashhudge-git/docker-react npm run test
- - docker run -d -p 81:80 akashhudge-git/freeweb
+ - docker run -e CI=true -d -p 81:80 akashhudge-git/freeweb
