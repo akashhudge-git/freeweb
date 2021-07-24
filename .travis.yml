@@ -1,0 +1,12 @@
+language: generic
+sudo: required
+services:
+ - docker
+
+before_install:
+#- docker build -t akashhudge-git/docker-react -f Dockerfile.dev .
+ - docker build -t akashhudge-git/freeweb .
+
+script:
+#- docker run -e CI=true akashhudge-git/docker-react npm run test
+ - docker run -d -p 81:80 akashhudge-git/freeweb
